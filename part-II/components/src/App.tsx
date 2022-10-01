@@ -9,7 +9,7 @@ function App() {
       <h1>Hello Adam</h1>
       <Message greeting="Hello there" name="bob" />
       <Message greeting="Hola" name={"Alice and Smith"} />
-      <Message greeting="This is a Summary" />
+      <Message greeting="This is a Summary I made" />
       <Summary names={["Bob", "Alice", "Dora"]} />
     </div>
   );
