@@ -15,14 +15,11 @@ function createInnerElements(names: any) {
 }
 
 export default function Summary(props: any) {
-  // console.log(props.names);
-  // console.log(createInnerElements(props.names));
   return (
     <>
       <h4 className="bg-info text-white text-center p-2">
         {createInnerElements(props.names)}
       </h4>
-      <p>name is tobi</p>
     </>
   );
 }
