@@ -1,9 +1,15 @@
 import React from "react";
 import "./App.css";
-import { Message } from "./Message";
 import Summary from "./Summary";
+import TableAction from "./TableAction";
+import ReactDOM from "react-dom";
 
 let names = ["Bob", "Alice", "Dora"];
+
+function reverseNames() {
+  names.reverse();
+  ReactDOM.render(<App />, document.getElementById("root"));
+}
 
 function App() {
   return (
@@ -15,7 +21,7 @@ function App() {
     //   <Summary names={["Bob", "Alice", "Dora"]} />
     // </div>
 
-    <table className="table table-sm table-striped">
+    <React.Fragment>
       <thead>
         <tr>
           <th>#</th>
@@ -32,7 +38,8 @@ function App() {
           );
         })}
       </tbody>
-    </table>
+      <TableAction reverseCallback={reverseNames} />
+    </React.Fragment>
   );
 }
 
