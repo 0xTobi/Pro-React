@@ -1,4 +1,5 @@
 import React from "react";
+import CallbackButton from "./CallbackButton";
 
 export default function Summary(props) {
   // React props are read only, and cannot be altered from the child component.
@@ -9,18 +10,16 @@ export default function Summary(props) {
       <td>{props.name}</td>
       <td>{props.name.length}</td>
       <td>
-        <button
-          className="btn btn-primary btn-sm"
-          onClick={props.reverseCallback}
-        >
-          Change
-        </button>
-        <button
-          className="btn btn-primary btn-sm"
-          onClick={() => props.promoteCallback(props.name)}
-        >
-          Promote
-        </button>
+        <CallbackButton
+          theme="primary"
+          text="Reverse"
+          callback={props.reverseCallback}
+        />
+        <CallbackButton
+          theme="secondary"
+          text="Promote"
+          callback={() => props.promoteCallback(props.name)}
+        />
       </td>
     </React.Fragment>
   );
