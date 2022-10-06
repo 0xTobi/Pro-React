@@ -3,7 +3,7 @@ import "./App.css";
 import Summary from "./Summary";
 import ReactDOM from "react-dom";
 
-let names = ["Bob", "Alice", "Dora"];
+let names = ["Bob", "Alice", "Dora", "Barbie"];
 
 function reverseNames() {
   names.reverse();
