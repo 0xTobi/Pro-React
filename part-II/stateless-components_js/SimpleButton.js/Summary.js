@@ -10,15 +10,12 @@ export default function Summary(props) {
       <td>{props.name}</td>
       <td>{props.name.length}</td>
       <td>
+        <CallbackButton callback={props.reverseCallback} />
         <CallbackButton
-          theme="primary"
-          text="Reverse"
-          callback={props.reverseCallback}
-        />
-        <CallbackButton
-          theme="secondary"
+          theme="info"
           text="Promote"
           callback={() => props.promoteCallback(props.name)}
+          disabled="true"
         />
       </td>
     </React.Fragment>
